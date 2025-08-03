@@ -1,0 +1,12 @@
+# Deny access to all files in this directory
+Deny from all
+
+# Allow access only to specific file types
+<FilesMatch "\.(jpg|jpeg|png|gif|pdf)$">
+    Allow from all
+</FilesMatch>
+
+# Prevent execution of PHP files
+<FilesMatch "\.php$">
+    Deny from all
+</FilesMatch>
